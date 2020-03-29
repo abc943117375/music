@@ -7,7 +7,9 @@
     "pages/musiclist/musiclist",
     "pages/player/player",
     "pages/blod-edit/blod-edit",
-    "pages/blog-comment/blog-comment"
+    "pages/blog-comment/blog-comment",
+    "pages/profile-playhistory/profile-playhistory",
+    "pages/profile-bloghistory/profile-bloghistory"
   ],
   "requiredBackgroundModes": [
     "audio"
@@ -34,15 +36,15 @@
       },
       {
         "pagePath": "pages/blog/blog",
-        "text": "音乐",
-        "iconPath": "images/music.png",
-        "selectedIconPath": "images/music-actived.png"
+        "text": "发现",
+        "iconPath": "images/blog.png",
+        "selectedIconPath": "images/blog-actived.png"
       },
       {
         "pagePath": "pages/profile/profile",
         "text": "音乐",
-        "iconPath": "images/music.png",
-        "selectedIconPath": "images/music-actived.png"
+        "iconPath": "images/profile.png",
+        "selectedIconPath": "images/profile-actived.png"
       }
     ]
   },

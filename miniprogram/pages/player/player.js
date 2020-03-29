@@ -58,6 +58,8 @@ Page({
         backgroundAudioManager.coverImgUrl = music.al.picUrl;
         backgroundAudioManager.singer = music.ar[0].name;
         backgroundAudioManager.singer = music.al.name;
+        // 保存播放历史
+        this.savePlayHistory()
       }
       this.setData({
         isPlaying: true
@@ -73,7 +75,6 @@ Page({
         }
       })
         .then(res => {
-          console.log(res);
           let lyric = '暂无歌词';
           const lrc = JSON.parse(res.result).lrc
           if (lrc) {
@@ -124,11 +125,30 @@ Page({
     // 根据选择器获取子组件  传递事件  updeta(参数为当前正在播放时间)
     this.selectComponent('.lyric').update(event.detail)
   },
+  // 保存歌曲播放历史
+  savePlayHistory() {
+    const music = musiclist[parseInt(nowPlayingIndex)];
+    const openid = app.globalData.openid;
+    const history = wx.getStorageSync(openid);
+    let bHave = false;
+    for (let i = 0; i < history.length; i++) {
+      if (history[i].id == music.id) {
+        bHave = true;
+        break
+      }
+    }
+    if (!bHave) {
+      history.unshift(music)
+      wx.setStorage({
+        key: openid,
+        data: history
+      })
+    }
+  },
   /**
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
-    console.log(options);
     nowPlayingIndex = options.index;
     musiclist = wx.getStorageSync('musiclist');
     this.loadMusicDetail(options.musicId)
@@ -138,13 +158,11 @@ Page({
     this.setData({
       isPlaying: true
     })
-    console.log('播放')
   },
   onPause() {
     this.setData({
       isPlaying: false
     })
-    console.log('暂停')
   },
 
   /**

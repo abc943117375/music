@@ -1,27 +1,37 @@
-// pages/profile/profile.js
+const MAX_LIMIT = 10;
+// pages/profile-bloghistory/profile-bloghistory.js
 Page({
 
   /**
    * 页面的初始数据
    */
   data: {
-
+    blogList: []
   },
 
-  onTapQrCode() {
+  _getListByCoundFn() {
     wx.showLoading({
-      title: '生成中...'
+      title: '加载中...'
     })
     wx.cloud.callFunction({
-      name: "getQrCode",
+      name: 'blog',
+      data: {
+        $url: 'getList',
+        start: this.data.blogList.length,
+        count: MAX_LIMIT
+      }
     }).then(res => {
-      const fileId = res.result
-      wx.previewImage({
-        urls: [fileId],
-        current: fileId
+      console.log(res);
+      this.setData({
+        blogList: this.data.blogList.concat(res.result)
       })
       wx.hideLoading()
-      console.log(res);
+    })
+  },
+
+  goComment(event) {
+    wx.navigateTo({
+      url: `../blog-comment/blog-comment?blogId=${event.target.dataset.blogid}`
     })
   },
 
@@ -29,7 +39,7 @@ Page({
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
-
+    this._getListByCoundFn()
   },
 
   /**
@@ -71,13 +81,17 @@ Page({
    * 页面上拉触底事件的处理函数
    */
   onReachBottom: function () {
-
+    this._getListByCoundFn()
   },
 
   /**
    * 用户点击右上角分享
    */
-  onShareAppMessage: function () {
-
+  onShareAppMessage: function (event) {
+    const blog = event.target.database.blog
+    return {
+      title: blog.content,
+      path: `/pages/blog-comment/blog-comment?blogId=${blog._id}`
+    }
   }
 })
