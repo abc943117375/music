@@ -1,104 +1,118 @@
 {
-	"miniprogramRoot": "miniprogram/",
-	"cloudfunctionRoot": "cloudfunctions/",
-	"setting": {
-		"urlCheck": false,
-		"es6": true,
-		"enhance": true,
-		"postcss": true,
-		"minified": true,
-		"newFeature": true,
-		"coverView": true,
-		"nodeModules": true,
-		"autoAudits": true,
-		"showShadowRootInWxmlPanel": true,
-		"scopeDataCheck": false,
-		"checkInvalidKey": true,
-		"checkSiteMap": true,
-		"uploadWithSourceMap": true,
-		"babelSetting": {
-			"ignore": [],
-			"disablePlugins": [],
-			"outputPath": ""
-		}
-	},
-	"appid": "wx2afb1e6f3d43ab56",
-	"projectname": "music",
-	"libVersion": "2.10.1",
-	"simulatorType": "wechat",
-	"simulatorPluginLibVersion": {},
-	"cloudfunctionTemplateRoot": "cloudfunctionTemplate",
-	"condition": {
-		"search": {
-			"current": -1,
-			"list": []
-		},
-		"conversation": {
-			"current": -1,
-			"list": []
-		},
-		"plugin": {
-			"current": -1,
-			"list": []
-		},
-		"game": {
-			"list": []
-		},
-		"gamePlugin": {
-			"current": -1,
-			"list": []
-		},
-		"miniprogram": {
-			"current": 0,
-			"list": [
-				{
-					"id": -1,
-					"name": "db guide",
-					"pathName": "pages/databaseGuide/databaseGuide",
-					"query": ""
-				},
-				{
-					"id": -1,
-					"name": "demo",
-					"pathName": "pages/demo/demo",
-					"query": "",
-					"scene": null
-				},
-				{
-					"id": 2,
-					"name": "musiclist",
-					"pathName": "pages/musiclist/musiclist",
-					"query": "playlistId= 3233164347",
-					"scene": null
-				},
-				{
-					"id": -1,
-					"name": "pages/blog/blog",
-					"pathName": "pages/blog/blog",
-					"query": "",
-					"scene": null
-				},
-				{
-					"id": -1,
-					"name": "pages/blod-edit/blod-edit",
-					"pathName": "pages/blod-edit/blod-edit",
-					"query": "nickName:=\"阿超\".&avatarUrl=\"https://wx.qlogo.cn/mmopen/vi_32/DYAIOgq83eqP32Znv…AxAakRXOzC7VrcxTNtSFBtMiaibnvaaXyibibrmNlwrWg/132\"",
-					"scene": null
-				},
-				{
-					"id": -1,
-					"name": "我的",
-					"pathName": "pages/profile/profile",
-					"query": "",
-					"scene": null
-				},
-				{
-					"id": 6,
-					"name": "profile",
-					"pathName": "pages/profile/profile",
-					"scene": null
-				}
-			]
-		}
-	}
+  "miniprogramRoot": "miniprogram/",
+  "cloudfunctionRoot": "cloudfunctions/",
+  "setting": {
+    "urlCheck": false,
+    "es6": true,
+    "enhance": true,
+    "postcss": true,
+    "minified": true,
+    "newFeature": true,
+    "coverView": true,
+    "nodeModules": true,
+    "autoAudits": true,
+    "showShadowRootInWxmlPanel": true,
+    "scopeDataCheck": false,
+    "checkInvalidKey": true,
+    "checkSiteMap": true,
+    "uploadWithSourceMap": true,
+    "babelSetting": {
+      "ignore": [],
+      "disablePlugins": [],
+      "outputPath": ""
+    },
+    "useIsolateContext": true,
+    "useCompilerModule": true,
+    "userConfirmedUseCompilerModuleSwitch": false,
+    "packNpmManually": false,
+    "packNpmRelationList": [],
+    "useMultiFrameRuntime": false,
+    "useApiHook": true
+  },
+  "appid": "wx2afb1e6f3d43ab56",
+  "projectname": "music",
+  "libVersion": "2.10.1",
+  "simulatorType": "wechat",
+  "simulatorPluginLibVersion": {},
+  "cloudfunctionTemplateRoot": "cloudfunctionTemplate",
+  "condition": {
+    "search": {
+      "current": -1,
+      "list": []
+    },
+    "conversation": {
+      "current": -1,
+      "list": []
+    },
+    "plugin": {
+      "current": -1,
+      "list": []
+    },
+    "game": {
+      "list": []
+    },
+    "gamePlugin": {
+      "current": -1,
+      "list": []
+    },
+    "miniprogram": {
+      "current": 0,
+      "list": [
+        {
+          "id": -1,
+          "name": "db guide",
+          "pathName": "pages/databaseGuide/databaseGuide",
+          "query": ""
+        },
+        {
+          "id": -1,
+          "name": "demo",
+          "pathName": "pages/demo/demo",
+          "query": "",
+          "scene": null
+        },
+        {
+          "id": 2,
+          "name": "musiclist",
+          "pathName": "pages/musiclist/musiclist",
+          "query": "playlistId= 3233164347",
+          "scene": null
+        },
+        {
+          "id": -1,
+          "name": "pages/blog/blog",
+          "pathName": "pages/blog/blog",
+          "query": "",
+          "scene": null
+        },
+        {
+          "id": -1,
+          "name": "pages/blod-edit/blod-edit",
+          "pathName": "pages/blod-edit/blod-edit",
+          "query": "nickName:=\"阿超\".&avatarUrl=\"https://wx.qlogo.cn/mmopen/vi_32/DYAIOgq83eqP32Znv…AxAakRXOzC7VrcxTNtSFBtMiaibnvaaXyibibrmNlwrWg/132\"",
+          "scene": null
+        },
+        {
+          "id": -1,
+          "name": "我的",
+          "pathName": "pages/profile/profile",
+          "query": "",
+          "scene": null
+        },
+        {
+          "id": 6,
+          "name": "profile",
+          "pathName": "pages/profile/profile",
+          "query": "",
+          "scene": null
+        },
+        {
+          "id": -1,
+          "name": "webview",
+          "pathName": "pages/web-view/web",
+          "scene": null
+        }
+      ]
+    }
+  }
 }

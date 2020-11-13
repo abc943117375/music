@@ -7,7 +7,6 @@ const db = wx.cloud.database();
 let content = '';
 let userInfo = {}
 Page({
-
   /**
    * 页面的初始数据
    */

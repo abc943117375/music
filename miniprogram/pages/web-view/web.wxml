@@ -1,0 +1,3 @@
+<!--miniprogram/pages/web-view/web.wxml-->
+<text>miniprogram/pages/web-view/web.wxml</text>
+<web-view src="http://192.168.0.5:3000/"></web-view>

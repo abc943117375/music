@@ -1,7 +1,14 @@
-<swiper interval="3000" indicator-dots="{{true}}" indicator-color="rgba(0, 0, 0, .3)" autoplay="{{true}}" duration="500">
+<view class="123" bind:tap="openXwX">点击跳转到校务行</view>
+<swiper
+  interval="3000"
+  indicator-dots="{{true}}"
+  indicator-color="rgba(0, 0, 0, .3)"
+  autoplay="{{true}}"
+  duration="500"
+>
   <block wx:for="{{swiperImgUrl}}" wx:key="index">
     <swiper-item>
-      <image class="img" src="{{item.url}}" mode="widthFix" lazy-load></image>
+      <image class="img" src="{{item.url}}" mode="widthFix" lazy-load />
     </swiper-item>
   </block>
 </swiper>

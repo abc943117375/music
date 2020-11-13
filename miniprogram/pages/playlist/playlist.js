@@ -2,9 +2,6 @@
 const MAX_LIMIT = 15;
 
 Page({
-  /**
-   * 页面的初始数据
-   */
   data: {
     swiperImgUrl: [
       {
@@ -20,41 +17,29 @@ Page({
     playlist: [
     ]
   },
+
+  openXwX() {
+    wx.navigateToMiniProgram({
+      appId: 'wx5da532e7f5b2afaf',
+      path: 'pages/home/index?id=123',
+      extraData: {
+        foo: 'bar'
+      },
+      envVersion: 'develop',
+      success(res) {
+        // 打开成功
+      },
+      complete(msg) {
+        console.log('接口调用完成', msg)
+      }
+    })
+  },
   /**
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
     this._getPlaylist()
   },
-
-  /**
-   * 生命周期函数--监听页面初次渲染完成
-   */
-  onReady: function () {
-
-  },
-
-  /**
-   * 生命周期函数--监听页面显示
-   */
-  onShow: function () {
-
-  },
-
-  /**
-   * 生命周期函数--监听页面隐藏
-   */
-  onHide: function () {
-
-  },
-
-  /**
-   * 生命周期函数--监听页面卸载
-   */
-  onUnload: function () {
-
-  },
-
   /**
    * 页面相关事件处理函数--监听用户下拉动作
    */
@@ -64,19 +49,11 @@ Page({
     })
     this._getPlaylist()
   },
-
   /**
    * 页面上拉触底事件的处理函数
    */
   onReachBottom: function () {
     this._getPlaylist()
-  },
-
-  /**
-   * 用户点击右上角分享
-   */
-  onShareAppMessage: function () {
-
   },
   _getPlaylist() {
     // 显示提示框提示用户,避免请求时间过长造成'假死现象'

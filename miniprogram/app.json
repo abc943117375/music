@@ -9,7 +9,8 @@
     "pages/blod-edit/blod-edit",
     "pages/blog-comment/blog-comment",
     "pages/profile-playhistory/profile-playhistory",
-    "pages/profile-bloghistory/profile-bloghistory"
+    "pages/profile-bloghistory/profile-bloghistory",
+    "pages/web-view/web"
   ],
   "requiredBackgroundModes": [
     "audio"
